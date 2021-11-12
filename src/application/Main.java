@@ -16,6 +16,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			Image icon = new Image("icon.png");
 			primaryStage.getIcons().add(icon);
+			primaryStage.setTitle("sunny side");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
