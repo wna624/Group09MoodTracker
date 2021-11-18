@@ -1,21 +1,54 @@
 package application;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class MoodTracker {
-	private String username;
-	private HashMap<String, Mood> moodData = new HashMap<String, Mood>(); //hashmap for storing the date and a mood object
-	//note: considering using the Java utility class Date instead of a string for the date
+	private ArrayList<Mood> moodList = new ArrayList<Mood>();
+	private FileWriter out = null;
+	private Scanner in = null;
 	
 	//constructor
-	public MoodTracker(String username) {
-		this.username = username;
+	public MoodTracker() throws FileNotFoundException {
+		loadMoods();
 	}
 	
-	public void addMood(String date, Mood newMood) {
-		moodData.put(date, newMood);
+	//adds Mood object to the ArrayList of moods and writes the new mood to the output file
+	public void addMood(Mood newMood) throws IOException {
+		moodList.add(newMood);
+		out = new FileWriter("..\\Group09MoodTracker\\data\\moodlog.csv");
+		out.write(newMood.getDate() + "," + newMood.getMood() + "," + newMood.getHappiness());
+		out.close();
 	}
 	
-	//maybe we should add a way to save this data to a file with the username and then their data will be saved between sessions
-
+	//prints toString of each Mood object in the ArrayList
+	public void getMoods() {
+		for (int i = 0; i < moodList.size(); i++) {
+			moodList.get(0);
+		}
+	}
+	
+	//reads in the moods from the output file and loads them into the ArrayList
+	public void loadMoods() throws FileNotFoundException {
+		File f = new File("..\\Group09MoodTracker\\data\\moodlog.csv");
+		in = new Scanner(f);
+		String line, inDate, inMood, inHappiness;
+		String[] moodInfo;
+		
+		while(in.hasNextLine()) {
+			line = in.nextLine();
+			moodInfo = line.split(",");
+			inDate = moodInfo[0];
+			inMood = moodInfo[1];
+			inHappiness = moodInfo[2];
+			moodList.add(new Mood(inDate, inMood, inHappiness));
+		}
+		in.close();
+	}
+	
+	
 }
