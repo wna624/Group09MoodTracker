@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MoodLogController">
+   <children>
+      <TextArea fx:id="moodTxt" layoutX="15.0" layoutY="108.0" prefHeight="481.0" prefWidth="570.0" />
+      <Button fx:id="homeBtn" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" text="home" />
+      <Label layoutX="15.0" layoutY="77.0" text="Mood Log:" />
+      <Button fx:id="loadBtn" layoutX="520.0" layoutY="62.0" mnemonicParsing="false" onAction="#refresh" text="refresh" />
+   </children>
+</AnchorPane>

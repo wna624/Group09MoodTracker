@@ -26,10 +26,12 @@ public class MoodTracker {
 	}
 	
 	//prints toString of each Mood object in the ArrayList
-	public void getMoods() {
+	public String getMoods() {
+		String result = "";
 		for (int i = 0; i < moodList.size(); i++) {
-			moodList.get(0);
+			result += moodList.get(i).toString();
 		}
+		return result;
 	}
 	
 	//reads in the moods from the output file and loads them into the ArrayList

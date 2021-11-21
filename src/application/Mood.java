@@ -24,7 +24,7 @@ public class Mood {
 	
 	//toString
 	public String toString() {
-		String result = getDate() + "\n\t" + getMood() + " - " + getHappiness();
+		String result = getDate() + "\n\t" + getMood() + " - Happiness Rating: " + getHappiness() + "\n";
 		return result;
 	}
 	
