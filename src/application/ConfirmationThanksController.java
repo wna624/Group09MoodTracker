@@ -18,7 +18,7 @@ public class ConfirmationThanksController {
 	
 	
 	void logMood(ActionEvent event) throws IOException {
-		AnchorPane logMood = FXMLLoader.load(getClass().getResource("MoodLogView.fxml"));
+		AnchorPane logMood = FXMLLoader.load(getClass().getResource("InputMood.fxml"));
 		logMoodBtn.getScene().setRoot(logMood);
 	}
 	
