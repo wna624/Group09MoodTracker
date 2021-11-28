@@ -20,7 +20,7 @@ public class MoodTracker {
 	//adds Mood object to the ArrayList of moods and writes the new mood to the output file
 	public void addMood(Mood newMood) throws IOException {
 		moodList.add(newMood);
-		out = new FileWriter("..\\Group09MoodTracker\\data\\moodlog.csv", true);
+		out = new FileWriter("..\\Group09MoodTracker\\data\\moodlog.txt", true);
 		out.write("\n" + newMood.getDate() + "," + newMood.getMood() + "," + newMood.getHappiness());
 		out.close();
 	}
@@ -36,7 +36,7 @@ public class MoodTracker {
 	
 	//reads in the moods from the output file and loads them into the ArrayList
 	public void loadMoods() throws FileNotFoundException {
-		File f = new File("..\\Group09MoodTracker\\data\\moodlog.csv");
+		File f = new File("..\\Group09MoodTracker\\data\\moodlog.txt");
 		in = new Scanner(f);
 		String line, inDate, inMood, inHappiness;
 		String[] moodInfo;

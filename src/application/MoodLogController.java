@@ -13,23 +13,20 @@ import javafx.scene.layout.AnchorPane;
 public class MoodLogController {
 	@FXML
     private TextArea moodTxt;
-
-    @FXML
-    private Button loadBtn;
     
     @FXML
     private Button homeBtn;
-
-    @FXML
-    void refresh(ActionEvent event) throws FileNotFoundException {
-    	MoodTracker moods = new MoodTracker();
-    	moodTxt.setText(moods.getMoods());
-    }
     
     @FXML
     void home() throws IOException {
     	AnchorPane home = FXMLLoader.load(getClass().getResource("HomeView.fxml"));
         homeBtn.getScene().setRoot(home);
+    }
+    
+    @FXML
+    void initialize() throws FileNotFoundException {
+    	MoodTracker moods = new MoodTracker();
+    	moodTxt.setText(moods.getMoods());
     }
 
 }

@@ -63,7 +63,7 @@ public class inputMoodController{
     	MoodTracker moods = new MoodTracker();
     	moods.addMood(new Mood(inDate, inMood, inHappiness));
     	
-    		
+    	nextPageView(event);
     	
     	//userMoodTxt.setText(""); // empty the text field for new move 
     	//userHappinessTxt.getText(); 
@@ -72,8 +72,14 @@ public class inputMoodController{
 
     @FXML
     void nextPageView(ActionEvent event)throws IOException {
-
-    	AnchorPane conformation = FXMLLoader.load(getClass().getResource("ConfirmationThanksView.fxml"));
-    	nextPage.getScene().setRoot(conformation);
+    	//AnchorPane conformation = FXMLLoader.load(getClass().getResource("ConfirmationThanksView.fxml"));
+    	//nextPage.getScene().setRoot(conformation);
+    	
+    	FXMLLoader fxload = new FXMLLoader(getClass().getResource("ConfirmationThanksView.fxml"));
+    	AnchorPane mainPane = fxload.load();
+    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	Scene scene = new Scene(mainPane);
+    	window.setScene(scene);
+    	window.show();
     }
 }

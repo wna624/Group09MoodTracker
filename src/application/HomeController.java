@@ -30,8 +30,6 @@ public class HomeController {
     public void goToMoodLog(ActionEvent event) throws IOException {
 		FXMLLoader fxload = new FXMLLoader(getClass().getResource("MoodLogView.fxml"));
     	AnchorPane mainPane = fxload.load();
-    	//MoodLogController logview = fxload.getController();
-    	//logview.load();
     	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
     	Scene scene = new Scene(mainPane);
     	window.setScene(scene);
