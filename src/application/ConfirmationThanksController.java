@@ -16,14 +16,14 @@ public class ConfirmationThanksController {
 	@FXML
 	private Button logMoodBtn;
 	
-	
+	@FXML
 	void logMood(ActionEvent event) throws IOException {
 		AnchorPane logMood = FXMLLoader.load(getClass().getResource("MoodLogView.fxml"));
 		logMoodBtn.getScene().setRoot(logMood);
 	}
 	
-	
-	void gohome(ActionEvent event) throws IOException{
+	@FXML
+	void goHome(ActionEvent event) throws IOException{
 		AnchorPane goHome = FXMLLoader.load(getClass().getResource("HomeView.fxml"));
 		goHomeBtn.getScene().setRoot(goHome);
 	}

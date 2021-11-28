@@ -1,9 +1,9 @@
 
 package application;
 
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+//import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 
@@ -23,7 +23,19 @@ public class inputMoodController{
     @FXML
     private Button homeButton;
     
-    @FXML TextField userMoodTxt;
+    @FXML
+    private TextField userDateTxt;
+
+    @FXML
+    private TextField userHappinessTxt;
+
+    @FXML
+    private TextField userMoodTxt;
+    
+  @
+  FXML 
+  private Button nextPage; 
+  
     
     @FXML
     private Label myLabel;
@@ -35,27 +47,33 @@ public class inputMoodController{
     void backHome(ActionEvent event) throws IOException { /*This will take the user to previous or home screen*/
     	URL url = new File("src/application/HomeView.fxml").toURI().toURL();
     	mainPane2 = FXMLLoader.load(url);
-    	
         Scene scene = new Scene(mainPane2);// pane you are GOING TO show
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();// pane you are ON
         window.setScene(scene);
         window.show();
     }
+    
     @FXML
     void saveButton(ActionEvent event) throws IOException{
-    	String feeling = userMoodTxt.getText();
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource(".fxml"));
-    	//root = loader.load();
-    	File file = new File("UserInput/Usermood.txt"); // searches the file and makes it the object 
-    	FileWriter fr = new FileWriter(file, true);  // opens the writer to write the data 
-    	BufferedWriter br = new BufferedWriter(fr); // pointer to the file writer 
-    	br.write(feeling); // writes the data 
-    	br.write("\n");
-    	userMoodTxt.setText(""); // empty the text field for new move 
-
-    	br.close();
-    	fr.close();
+  
+    	String inMood = userMoodTxt.getText();
+		String inDate = userDateTxt.getText(); 
+    	String inHappiness = userHappinessTxt.getText(); 
     	
+    	MoodTracker moods = new MoodTracker();
+    	moods.addMood(new Mood(inDate, inMood, inHappiness));
+    	
+    		
+    	
+    	//userMoodTxt.setText(""); // empty the text field for new move 
+    	//userHappinessTxt.getText(); 
+    	//userDateTxt.setText("");
     }
- 
+
+    @FXML
+    void nextPageView(ActionEvent event)throws IOException {
+
+    	AnchorPane conformation = FXMLLoader.load(getClass().getResource("ConfirmationThanksView.fxml"));
+    	nextPage.getScene().setRoot(conformation);
+    }
 }

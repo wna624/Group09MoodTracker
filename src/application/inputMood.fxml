@@ -8,14 +8,23 @@
 
 <AnchorPane fx:id="mainPane2" prefHeight="376.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.inputMoodController">
    <children>
-      <Button fx:id="save" layoutX="229.0" layoutY="262.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: black;" text="SAVE" textFill="WHITE">
+      <Button fx:id="save" layoutX="199.0" layoutY="317.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: black;" text="SAVE" textFill="WHITE">
          <effect>
             <Glow />
          </effect>
       </Button>
-      <TextField fx:id="userMoodTxt" layoutX="108.0" layoutY="153.0" prefHeight="56.0" prefWidth="334.0" />
-      <Label layoutX="171.0" layoutY="109.0" prefHeight="56.0" prefWidth="245.0" text="HOW DO YOU FEEL TODAY? " />
-      <Button fx:id="homeButton1" layoutX="429.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHome" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: black;" text="HOME" textFill="WHITE">
+      <TextField fx:id="userDateTxt" layoutX="40.0" layoutY="60.0" prefHeight="56.0" prefWidth="334.0" />
+      <Label layoutX="39.0" layoutY="126.0" prefHeight="23.0" prefWidth="246.0" text="HOW IS YOUR MOOD TODAY?" />
+      <Button fx:id="homeButton1" layoutX="448.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHome" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: black;" text="HOME" textFill="WHITE">
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Label layoutX="39.0" layoutY="17.0" prefHeight="56.0" prefWidth="245.0" text="ENTER TODAY'S DATE" />
+      <TextField fx:id="userMoodTxt" layoutX="40.0" layoutY="149.0" prefHeight="56.0" prefWidth="334.0" />
+      <Label layoutX="39.0" layoutY="217.0" prefHeight="23.0" prefWidth="324.0" text="RATE YOUR MOOD OUT OF FIVE ( 1-lowest to 5-hightest)" />
+      <TextField fx:id="userHappinessTxt" layoutX="32.0" layoutY="240.0" prefHeight="56.0" prefWidth="334.0" />
+      <Button fx:id="nextPage" layoutX="460.0" layoutY="317.0" mnemonicParsing="false" onAction="#nextPageView" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: black;" text="Next Page" textFill="WHITE">
          <effect>
             <Glow />
          </effect>
