@@ -22,4 +22,13 @@ public class HomeController {
     	window.setScene(scene);
     	window.show();
     }
+	@FXML
+	 void handle(ActionEvent event) throws IOException {
+			FXMLLoader fxload = new FXMLLoader(getClass().getResource("inputMood.fxml"));
+	    	AnchorPane mainPane = fxload.load();
+	    	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    	Scene scene = new Scene(mainPane);
+	    	window.setScene(scene);
+	    	window.show();
+	    }
 }
