@@ -20,8 +20,8 @@ public class MoodTracker {
 	//adds Mood object to the ArrayList of moods and writes the new mood to the output file
 	public void addMood(Mood newMood) throws IOException {
 		moodList.add(newMood);
-		out = new FileWriter("..\\Group09MoodTracker\\data\\moodlog.csv");
-		out.write(newMood.getDate() + "," + newMood.getMood() + "," + newMood.getHappiness());
+		out = new FileWriter("..\\Group09MoodTracker\\data\\moodlog.csv", true);
+		out.write("\n" + newMood.getDate() + "," + newMood.getMood() + "," + newMood.getHappiness());
 		out.close();
 	}
 	
