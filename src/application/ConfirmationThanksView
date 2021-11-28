@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Button fx:id="goHomeBtn" layoutX="516.0" layoutY="14.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: black;" text="Go Home" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="logMoodBtn" layoutX="240.0" layoutY="238.0" mnemonicParsing="false" onAction="#logMood" style="-fx-background-color: black;" text="Log Another Mood" textAlignment="CENTER" textFill="WHITE" />
+      <Accordion />
+      <Text fontSmoothingType="LCD" layoutX="196.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your mood has been saved!" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
