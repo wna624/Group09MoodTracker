@@ -1,9 +1,9 @@
-sunny side
+Sunny Side
 by group 9
 Adam Galindo
 Daniel Lugo-Diaz
 Samantha Murray
-Krupa Patel
+Krupa Patel 
 Calib Rife
 
 This app will help users gain insight into what is affecting their mood. It will help motivate them to be
