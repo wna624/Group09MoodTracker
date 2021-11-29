@@ -1,9 +1,10 @@
-sunny side
-by group 9
-Adam Galindo
-Daniel Lugo-Diaz
-Samantha Murray
-Krupa Patel
+Sunny Side
+By Group 9
+
+Adam Galindo - Gitbhub: agalindo96
+Daniel Lugo-Diaz - Gitbhub: lugo-1
+Samantha Murray - Gitbhub: smurray769 
+Krupa Patel - Gitbhub: wna624
 Calib Rife
 
 This app will help users gain insight into what is affecting their mood. It will help motivate them to be
